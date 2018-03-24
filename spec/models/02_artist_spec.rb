@@ -1,9 +1,11 @@
+
+
 describe 'Artist' do
   before do
     @prince = Artist.create(name: "Prince")
   end
 
-  after do 
+  after do
     clean_database
   end
 

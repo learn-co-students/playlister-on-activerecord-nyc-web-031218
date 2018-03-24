@@ -1,9 +1,11 @@
+
+
 describe 'Song Associations' do
   before do
     @song = Song.create(name: "Forever")
   end
 
-  after do 
+  after do
     clean_database
   end
 
@@ -37,5 +39,5 @@ describe 'Song Associations' do
     expect(Song.where(name: "Forever").first.genre).to eq(genre)
     expect(Genre.where(name: "Rap").first.songs).to include(@song)
   end
-  
+
 end
